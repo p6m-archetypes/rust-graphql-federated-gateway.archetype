@@ -1,0 +1,16 @@
+---
+apiVersion: meta.p6m.dev/v1alpha1
+kind: PlatformApplication
+metadata:
+  name: federated-gateway
+spec:
+  config:
+    APOLLO_ROUTER_LOG: "debug"
+    # AUTH0_ENDPOINT: https://some-tenant.us.auth0.com/.well-known/jwks.json
+  networking:
+    ingress:
+      hostnames:
+        - fed-gateway.eks.us-west-2.aws.prd.{{ venture-name }}.{{ org-name }}.p6m.dev
+      cdn:
+        domains:
+          - fed-gateway.cdn.aws.prd.{{ venture-name }}.{{ org-name }}.p6m.dev

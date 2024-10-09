@@ -1,0 +1,33 @@
+---
+apiVersion: meta.p6m.dev/v1alpha1
+kind: PlatformApplication
+metadata:
+  name: federated-gateway
+  labels:
+    p6m.dev/domain: company
+    p6m.dev/app: federated-gateway
+spec:
+  config: {}
+#    APOLLO_ROUTER_LOG: "debug"
+#    AUTH0_ENDPOINT: https://some-tenant.us.auth0.com/.well-known/jwks.json
+  autoscaling:
+    enabled: true
+  deployment:
+    image: graphql-federated-gateway-server:latest # Set to a digest in the .platform repo patch
+    ports:
+      - protocol: http
+        port: 8080
+      - protocol: http
+        port: 8081
+    readinessProbe:
+      port: 8081
+      path: /health
+  networking:
+    ingress:
+      enabled: true
+      path: /
+      hostnames: [] # This is set in the patch files per environment
+      cdn:
+        enabled: true
+        required: true
+        domains: [] # This is set in the patch files per environment

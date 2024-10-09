@@ -1,0 +1,9 @@
+federation_version: "=2.2.1"                       # Apollo Graphql Federation version (Used directly in the config)
+subgraphs:                                  # Map of the subgraphs to be used in the composition
+  # TODO Replace 'default-domain-gateway' with your domain gateway information
+  default-domain-gateway:                   # Repository name for service
+    routing_url: http://default-domain-gateway.default-domain-gateway:8080/graphql # Kubernetes Service address for deployed service
+    automation:
+      org: default                          # Github organization name for 'domain-gateway' repository
+      branch: main                          # Branch to pull from
+      file: default-domain-gateway.graphql  # File name / path for subgraph

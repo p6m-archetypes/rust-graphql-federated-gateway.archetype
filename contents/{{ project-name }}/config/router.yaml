@@ -1,0 +1,39 @@
+cors:
+  # allow_credentials: true
+  allow_any_origin: true
+
+health_check:
+  listen: 0.0.0.0:8081
+  enabled: true
+
+homepage:
+  enabled: false
+
+sandbox:
+  enabled: false
+
+supergraph:
+  listen: 0.0.0.0:8080
+  introspection: false
+
+include_subgraph_errors:
+  all: true # Propagate errors from all subgraphs
+
+# TODO Uncomment this section to enable Auth0 JWT validation
+#plugins:
+#  p6m.auth:
+#    jwks:
+#      - provider: auth0
+#        endpoint: # TODO Update this endpoint to your Auth0 tenant
+#        rotate_seconds: 86400
+#    allow:
+#      queries: []
+#      #        - __schema
+#      #        - "auth*"
+#      mutations: []
+#       #       - "auth*"
+# headers:
+#   all:
+#     request:
+#       - propagate:
+#           named: "Authorization"
