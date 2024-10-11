@@ -1,4 +1,4 @@
-# {{ org-venture-title }} GraphQL Federated Gateway
+# {{ org-solution-title }} GraphQL Federated Gateway
 
 The Graphql Federated Gateway leverages a modified Apollo Federated Gateway Docker image to streamline some of the
 configuration.
