@@ -1,4 +1,4 @@
-FROM p6m-dev.jfrog.io/p6m-dev-docker/applications/p6m-router:latest
+FROM p6m.jfrog.io/p6m-dev-docker/applications/p6m-router:latest
 COPY config/ .
 
 EXPOSE 8080/tcp
