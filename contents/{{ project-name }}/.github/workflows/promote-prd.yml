@@ -8,6 +8,8 @@ on:
         description: 'Tag to promote'
         required: true
 
+permissions: write-all
+
 jobs:
   promote:
     name: Promote Tag with Digest
