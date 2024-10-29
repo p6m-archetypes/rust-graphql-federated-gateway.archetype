@@ -10,7 +10,7 @@ spec:
   networking:
     ingress:
       hostnames:
-        - fed-gateway.eks.us-west-2.aws.dev.{{ solution-name }}.{{ org-name }}.p6m.dev
+        - fed-gateway.eks.us-east-2.aws.dev.{{ org-name }}-{{ solution-name }}.p6m.run
       cdn:
         domains:
-          - fed-gateway.cdn.aws.dev.{{ solution-name }}.{{ org-name }}.p6m.dev
+          - fed-gateway.cdn.aws.dev.{{ org-name }}-{{ solution-name }}.p6m.run
