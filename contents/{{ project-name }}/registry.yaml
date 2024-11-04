@@ -4,6 +4,6 @@ subgraphs:                                  # Map of the subgraphs to be used in
   default-domain-gateway:                   # Repository name for service
     routing_url: http://default-domain-gateway.default-domain-gateway:8080/graphql # Kubernetes Service address for deployed service
     automation:
-      org: default                          # Github organization name for 'domain-gateway' repository
+      org: {{ org-name}}-{{ solution-name }} # Github organization name for 'domain-gateway' repository
       branch: main                          # Branch to pull from
       file: default-domain-gateway.graphql  # File name / path for subgraph
