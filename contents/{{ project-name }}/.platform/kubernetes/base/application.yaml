@@ -27,6 +27,7 @@ spec:
       enabled: true
       path: /
       hostnames: [] # This is set in the patch files per environment
+      oidc: false # OAuth2 Proxy is disabled by default
       cdn:
         enabled: true
         required: true
