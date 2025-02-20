@@ -6,11 +6,3 @@ metadata:
 spec:
   config:
     APOLLO_ROUTER_LOG: "debug"
-    # AUTH0_ENDPOINT: https://some-tenant.us.auth0.com/.well-known/jwks.json
-  networking:
-    ingress:
-      hostnames:
-        - fed-gateway.eks.us-east-2.aws.prd.{{ org-name }}-{{ solution-name }}.p6m.run
-      cdn:
-        domains:
-          - fed-gateway.cdn.aws.prd.{{ org-name }}-{{ solution-name }}.p6m.run
