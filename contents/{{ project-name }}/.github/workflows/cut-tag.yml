@@ -11,6 +11,7 @@ jobs:
     name: Tag Version
     uses: p6m-dev/github-actions/.github/workflows/cut-tag-docker.yml@main
     secrets:
+      ARTIFACTORY_HOSTNAME: ${{'{'}}{ vars.ARTIFACTORY_HOSTNAME }}
       ARTIFACTORY_USERNAME: ${{'{'}}{ secrets.ARTIFACTORY_USERNAME }}
       ARTIFACTORY_IDENTITY_TOKEN: ${{'{'}}{ secrets.ARTIFACTORY_IDENTITY_TOKEN }}
 
