@@ -7,5 +7,5 @@ This archetype generates a GraphQL-based Federated Gateway (Apollo Router) for a
 To render this archetype, execute the following in your shell:
 
 ```shell
-archetect render git@github.com:p6m-dev/rust-graphql-federated-gatway.archetype.git
+archetect render git@github.com:p6m-archetypes/rust-graphql-federated-gatway.archetype.git
 ```
